@@ -11,18 +11,14 @@
 $(document).ready(function(){
 	
 	$(".accordion h3").eq(0).addClass("active");
-	$(".accordion #menu_body").eq(0).show("active");
-	
-	
+	$(".accordion #menu_body").eq(0).show("active");	
 	$(".accordion h3").click(function(){
 		$(this).next("#menu_body").slideToggle("1000")
 		.siblings("#menu_body:visible").slideUp("1000");
 	
 		$(this).toggleClass("active");
 		$(this).siblings("h3").removeClass("active");
-	});
-
-	
+	});	
 });
 </script>
 
