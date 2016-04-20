@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Accordion 1</title>
+
+<script type="text/javascript" src="http://www.webdesignerwall.com/demo/jquery/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$(".accordion h3").eq(0).addClass("active");
+	$(".accordion #menu_body").eq(0).show("active");
+	
+	
+	$(".accordion h3").click(function(){
+		$(this).next("#menu_body").slideToggle("1000")
+		.siblings("#menu_body:visible").slideUp("1000");
+	
+		$(this).toggleClass("active");
+		$(this).siblings("h3").removeClass("active");
+	});
+
+	
+});
+</script>
+
+<style type="text/css">
+body {
+	margin: 10px auto;
+	width: 995px;
+	font: 0.875em/120% Arial, Helvetica, sans-serif;
+}
+.accordion {
+	width: 263px;
+	border-bottom: solid 1px #c4c4c4;
+}
+.accordion h3 {
+	background: #e9e7e7 url(images/arrow-square.png) no-repeat left -51px;
+	padding: 7px 20px;
+	margin: 0;
+	font: bold 1.2em/100% Arial, Helvetica, sans-serif;
+	border-top: solid 1px #c4c4c4;
+	cursor: pointer;
+}
+.accordion h3:hover {
+	background-color: #e3e2e2;
+}
+.accordion h3.active {
+	background-position: left 5px;
+	background-color: #89b341;
+}
+.accordion #menu_body  {
+	background: #f7f7f7;
+	margin: 0;
+	padding: 10px 15px 20px;
+	border-left: solid 1px #c4c4c4;
+	border-right: solid 1px #c4c4c4;
+}
+#menu_body {
+	display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="accordion">
+	
+    <h3>Safety Information</h3>
+    <div id="menu_body">
+	<img src="images/safety.png" />
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+	</div>
+  <h3>Frequently Asked Questions</h3>
+     <div id="menu_body">
+      <img src="images/faqs.png"/>
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+	</div>
+  <h3>DOT Recovery</h3>
+       <div id="menu_body">
+	<img src="images/dot_recovery.png" />
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+  </div>
+	<h3>Flight Status</h3>
+     <div id="menu_body">
+    <img src="images/flight_status.png">
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+   </div>
+	<h3>Budget, Performance &amp; Accountability</h3>
+     <div id="menu_body">
+     <img src="images/flight_status.png">
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+     </div>
+    <h3>2009-H1N1 Flu Information</h3>
+     <div id="menu_body">
+     <img src="images/flight_status.png">
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+   </div> 
+</div>
+
+</body>
+</html>
